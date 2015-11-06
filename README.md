@@ -1,0 +1,2 @@
+# emojigma
+Emojigma -- Emoticon Cryptography
