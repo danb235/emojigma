@@ -1,0 +1,19 @@
+<div class="hero-unit">
+  <h1>About:</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+{{#if_logged_in}}
+  <div class="btn-group">
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+      USERNAME
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>Profile</li>
+      <li>Logout</li>
+    </ul>
+  </div>
+{{/if_logged_in}}

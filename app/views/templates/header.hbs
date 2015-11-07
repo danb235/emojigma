@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </a>
+  <a class="brand" href="#">brunch-with-chaplin-and-bootstrap</a>
+  <div class="btn-group pull-right">
+    {{#if_logged_in}}
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <img src="{{user.picture}}" height="20" width="20"/>&nbsp;{{user.given_name}}
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="/profile"><i class="icon-user"></i>&nbsp;View profile</a></li>
+        <li><a href="/settings"><i class="icon-cog"></i>&nbsp;Edit settings</a></li>
+        <li class="divider"></li>
+        <li><a href="#" class="logout"><i class="icon-off"></i>&nbsp;Sign out</a></li>
+      </ul>
+    {{else}}
+      <a class="btn dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-user"></i>Sign In <strong class="caret"></strong></a>
+      <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+        <form>
+          <input class="btn btn-primary btn-block login_google" type="button" id="sign-in-google" value="Sign In with Google">
+          <input class="btn btn-primary btn-block login_twitter" disabled type="button" id="sign-in-twitter" value="Sign In with Twitter">
+        </form>
+      </div>
+    {{/if_logged_in}}
+  </div>
+
+  <div class="nav-collapse">
+    <ul class="nav">
+    {{#each items}}
+        <li><a href="{{href}}">{{title}}</a></li>
+    {{/each}}
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
