@@ -1,5 +1,4 @@
 Controller = require 'controllers/base/controller'
-Collection = require 'models/issues_collection'
 PageView = require 'views/issue_page_view'
 
 module.exports = class IssueController extends Controller
@@ -13,4 +12,3 @@ module.exports = class IssueController extends Controller
         id: options.id
       error: (collection, xhr, options) ->
         console.error xhr
-
