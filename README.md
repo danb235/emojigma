@@ -23,7 +23,9 @@ brunch watch --server
  The ```brunch watch --server``` task will build the app, start the local server, and watch for file changes. Once the brunch watch command is finished the app will be available at [https://localhost:3333](https://localhost:3333).
 
 ## Deploy
+remove ./public from .gitignore
 ```
 git add public && git commit -m "public subtree commit"
 git subtree push --prefix public origin gh-pages
 ```
+add ./public from .gitignore
